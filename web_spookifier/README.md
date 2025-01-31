@@ -53,20 +53,19 @@ def generate_render(converted_fonts):
 	result = '''
 		<tr>
 			<td>${font0}</td>
-        </tr>
-        
-		<tr>
-        	<td>${font1}</td>
-        </tr>
-        
-		<tr>
-        	<td>${font2}</td>
-        </tr>
-        
-		<tr>
-        	<td>${font3}</td>
-        </tr>
+		</tr>
 
+		<tr>
+			<td>${font1}</td>
+		</tr>
+
+		<tr>
+			<td>${font2}</td>
+		</tr>
+
+		<tr>
+			<td>${font3}</td>
+		</tr>
 	'''
 	
 	return Template(result).render(
