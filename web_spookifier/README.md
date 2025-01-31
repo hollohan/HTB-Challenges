@@ -16,7 +16,7 @@ This app is extremely simple.  There is a single page with a single input field.
 ### spookify()
 The ```spookify``` function takes the text that was provided as an argument and sends it to the ```change_font``` function.  It then sends the result to the ```generate_render``` function.
 
-### change_font
+### change_font()
 The first thing that happens in the ```change_font``` function is that the ```text_list``` argument, which is the original user input string, gets converted into a list of characters.  A lambda function is then defined and assigned to ```add_font_to_list```.
 ```
 add_font_to_list = lambda text,font_type : (
@@ -29,7 +29,7 @@ The lambda function takes 2 arguments, ```text``` and ```font_type```.  The lamb
 
 The lambda function is called for each one of the fonts defined earlier in the code, providing the font type and the ```text_list``` argument.
 
-### generate_render
+### generate_render()
 This is where things get interesting.  The ```generate_render``` function takes each one of the 4 fonts that were calculated in the ```change_font``` function and inputs them into a string, ```result```.  The result provided as an argument to ```mako.Template```.
 ```
 Template(result).render()
