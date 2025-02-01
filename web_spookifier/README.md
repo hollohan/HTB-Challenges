@@ -46,7 +46,7 @@ According to the Mako docs, 'The contents within the ${} tag are evaluated by Py
 http://localhost:1337/?text=${open(%27/flag.txt%27,%27r%27).read()}
 ```
 Using the URL above works as expected and the flag is revealed within the contents of the page.
-## Mediation
+## Remediation
 In order to resolve this issue the template needs to be proplery formated with ${} tags and then sent to the template engine along with the arguments passed to the ```render``` function.  By doing this the arguments will not be interpretted as part of the template.  The updated ```generate_render``` below will prevent the issue from occurring.
 ```
 def generate_render(converted_fonts):

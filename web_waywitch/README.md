@@ -48,7 +48,7 @@ The next question is whether or not the live target is using the same secret.  T
 ## Attack
 Craft an HS256 JWT token using the secret 'halloween-secret' with the data ```{"username":"admin"}```.  Send a request to the /tickets API endpoint and the flag will be revealed in the response.
 
-## Mediation
+## Remediation
 Ideally the app would want to make sure to use a hard to guess secret that is not hard coded.  I commonly see this accomplished by generating a random secret at runtime.  Another common approach is to generate or store a secret outside ot the scope of the app and feed it to the app via environment variables.  It's also a good idea to explicitly state the algorithm in the verify(and encode) function.  In this case 'HS256'.
 ```
 const crypto = require('crypto');
