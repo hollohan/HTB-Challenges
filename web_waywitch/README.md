@@ -1,4 +1,4 @@
-# Spookifier
+# WayWitch
 - difficulty: very easy
 - vulnerabilities: harcoded secret
 
