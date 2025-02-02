@@ -1,4 +1,4 @@
-# Spookifier
+# <title>
 - difficulty:
 - vulnerabilities:
 
